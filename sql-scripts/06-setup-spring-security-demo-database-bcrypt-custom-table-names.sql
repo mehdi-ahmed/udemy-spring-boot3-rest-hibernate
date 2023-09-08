@@ -26,13 +26,26 @@ CREATE TABLE `members` (
 
 INSERT INTO `members`
 VALUES
-('john','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
-('mary','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
-('susan','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1);
+('marcus','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
+('sophie','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1),
+('ilona','{bcrypt}$2a$10$qeS0HEh7urweMojsnwNAR.vcXJeXR1UcMRZ2WcGQl9YeuspUdgF.q',1);
 
 
 --
 -- Table structure for table `authorities`
+--
+
+INSERT INTO `roles`
+VALUES
+    ('marcus','ROLE_EMPLOYEE'),
+    ('sophie','ROLE_EMPLOYEE'),
+    ('ilona','ROLE_EMPLOYEE'),
+    ('sophie','ROLE_MANAGER'),
+    ('marcus','ROLE_MANAGER'),
+    ('marcus','ROLE_ADMIN');
+
+--
+-- Inserting data for table `roles`
 --
 
 CREATE TABLE `roles` (
@@ -41,16 +54,3 @@ CREATE TABLE `roles` (
   UNIQUE KEY `authorities5_idx_1` (`user_id`,`role`),
   CONSTRAINT `authorities5_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `members` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Inserting data for table `roles`
---
-
-INSERT INTO `roles`
-VALUES
-('john','ROLE_EMPLOYEE'),
-('mary','ROLE_EMPLOYEE'),
-('mary','ROLE_MANAGER'),
-('susan','ROLE_EMPLOYEE'),
-('susan','ROLE_MANAGER'),
-('susan','ROLE_ADMIN');

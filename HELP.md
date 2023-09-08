@@ -1,21 +1,15 @@
-# Getting Started
+# Chapter 5 - Rest Security
 
-### Reference Documentation
-For further reference, please consider the following sections:
+- Added custom user/password for Spring Security in config file.
+- Creation of Users/Roles with _InMemoryUserDetailsManager_ (Will be replaced with _UserDetailsManager_ with DB support)
+- Postman Authorization tab
+- Restrict URLs based on Path and Http Methods(Rest Endpoints) based on roles and _SecurityFilterChain_ and User Roles
+- Disabling CSRF
+- DB support(Spring Security Predefined schemas) with Table creation(Authorities(roles), users)
+- Storing passwords in DB: Plaintext & Encrypted.
+- Custom Tables for Spring Security(instead of name determined tables)
+- -------------
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.0.3/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.0.3/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.0.3/reference/htmlsingle/#web)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/3.0.3/reference/htmlsingle/#data.sql.jpa-and-spring-data)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/3.0.3/reference/htmlsingle/#using.devtools)
 
-### Guides
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
-
+    - todo / For Spring Boot REST API Security, how can I add security support using JPA/Hibernate?
+    - https://www.luv2code.com/bonus-lecture-spring-boot-rest-security-jpa-hibernate-bcrypt-pdf
