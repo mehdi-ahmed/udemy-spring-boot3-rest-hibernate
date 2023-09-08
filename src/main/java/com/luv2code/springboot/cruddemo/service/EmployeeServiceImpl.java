@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-    private EmployeeRepository employeeRepository;
+    private final EmployeeRepository employeeRepository;
 
     @Autowired
     public EmployeeServiceImpl(EmployeeRepository theEmployeeRepository) {
@@ -27,7 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee findById(int theId) {
         Optional<Employee> result = employeeRepository.findById(theId);
 
-        Employee theEmployee = null;
+        Employee theEmployee;
 
         if (result.isPresent()) {
             theEmployee = result.get();
