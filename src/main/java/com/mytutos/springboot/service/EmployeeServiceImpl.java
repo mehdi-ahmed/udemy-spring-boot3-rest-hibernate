@@ -1,7 +1,7 @@
-package com.luv2code.springboot.cruddemo.service;
+package com.mytutos.springboot.service;
 
-import com.luv2code.springboot.cruddemo.dao.EmployeeRepository;
-import com.luv2code.springboot.cruddemo.entity.Employee;
+import com.mytutos.springboot.dao.EmployeeRepository;
+import com.mytutos.springboot.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +21,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public List<Employee> findAll() {
         return employeeRepository.findAll();
+    }
+
+    @Override
+    public List<Employee> findAllSortedByLastName() {
+        return employeeRepository.findAllByOrderByLastNameAsc();
     }
 
     @Override
